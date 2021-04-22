@@ -1,0 +1,120 @@
+header{
+    & .logo,& .logo-mobile{
+        height: auto;
+        max-width: 280px;
+        width: 100%;
+    }
+    & .logo-mobile{
+        @media all and (min-width: 991px){
+            display: none;
+            opacity: 0;
+        }
+        &.visible-mobile{
+            display: block;
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 8889;
+        }
+    }
+    & nav#gsweb-desktop-menu{
+        @media all and (max-width: 1200px){
+            transition: all ease-in-out 0.5s;
+            &.active{
+                align-items: center;
+                background: #29abe2;
+                display: flex!important;
+                height: 100%;
+                justify-content: center;
+                left: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 8887;
+                & li{
+                    display: block!important;
+                    text-align: center!important;
+                    margin: 0 auto!important;
+                    & > a{
+                        border-top: 2px solid transparent;
+                        border-bottom: 2px solid transparent;
+                        color: var(--bs-white);
+                        display: block;
+                        font-size: 2rem;
+                        text-decoration: none;
+                        &:hover,&.link-active{
+                            border-bottom: 2px solid var(--bs-white);
+                            color: var(--bs-white);
+                        }
+                    }
+                }
+            }
+        }
+        & > ul{
+            list-style: none!important;
+            margin: 0!important;
+            padding: 0!important;
+            & > li{
+                &:first-of-type{
+                    margin-left: auto;
+                }
+                display: inline-block;
+                margin-left: 30px;
+                & > a{
+                    border-top: 2px solid transparent;
+                    border-bottom: 2px solid transparent;
+                    color: var(--bs-black);
+                    display: block;
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    &:hover,&.link-active{
+                        border-bottom: 2px solid var(--bs-success);
+                        color: var(--bs-success);
+                    }
+                }
+            }
+        }
+    }
+    & #gsweb-mobile-menu{
+        padding: 5px 15px;
+        &:hover{
+            background: var(--bs-success);
+            color: var(--bs-white);
+        }
+    }
+}
+.gsweb-btn-close{
+    background: transparent;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.gsweb-top-alert{
+    background: {
+        color: var(--bs-primary);
+        image: url(../assets/images/topBG.jpg);
+        size: cover;
+        position: center center;
+    }
+    @media all and (max-width: 991px) {
+        padding-bottom: 20px!important;
+        padding-top: 20px!important;
+        & h2{
+            font-size: 1rem!important;
+        }
+    }
+}
+.gsweb-menu-close{
+    @media all and (min-width: 991px){
+        display: none;
+        opacity: 0;
+    }
+    background: transparent;
+    top: 20px;
+    right: 30px;
+    font-size: 40px!important;
+    cursor: pointer;
+}
