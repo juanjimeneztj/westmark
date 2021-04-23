@@ -71,8 +71,8 @@ header{
                     font-size: 1.2rem;
                     text-decoration: none;
                     &:hover,&.link-active{
-                        border-bottom: 2px solid var(--bs-success);
-                        color: var(--bs-success);
+                        border-bottom: 2px solid var(--secondary);
+                        color: var(--secondary);
                     }
                 }
             }
@@ -81,7 +81,7 @@ header{
     & #gsweb-mobile-menu{
         padding: 5px 15px;
         &:hover{
-            background: var(--bs-success);
+            background: var(--secondary);
             color: var(--bs-white);
         }
     }
