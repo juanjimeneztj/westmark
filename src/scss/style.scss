@@ -144,11 +144,40 @@ header{
     grid-column-gap: 10px;
     & .gsweb-item{
         position: relative;
+        &.gsweb-item-gradient::before{
+            content:'';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to bottom, transparent 0%, var(--primary) 50%);
+            opacity: 0.8;
+            z-index: 1;
+        }
         & p{
             bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
         }
+        & h6{
+            bottom: 6%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+}
+.gsweb-bg-cover{
+    background: {
+        color: var(--primary);
+        image: url(../assets/images/24@2x.png);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+    & h3 > .fw-lighter{
+        font-family: var(--bs-font-sans-serif)!important;
     }
 }
