@@ -1,3 +1,6 @@
+div, div *{
+    overflow: hidden;
+}
 header{
     & .logo,& .logo-mobile{
         height: auto;
@@ -86,6 +89,17 @@ header{
         }
     }
 }
+.gsweb-right-btn{
+    cursor: pointer;
+    color: white;
+    right: 15%;
+    top: 50%;
+    font-size: 50px;
+    transform: translateY(-50%);
+    @media all and (max-width: 1600px){
+        right: 8%;
+    }
+}
 .gsweb-btn-close{
     background: transparent;
     top: 50%;
@@ -95,7 +109,7 @@ header{
 .gsweb-top-alert{
     background: {
         color: var(--bs-primary);
-        image: url(../assets/images/topBG.jpg);
+        image: url(../assets/images/top-background-image.png);
         size: cover;
         position: center center;
     }
@@ -117,4 +131,24 @@ header{
     right: 30px;
     font-size: 40px!important;
     cursor: pointer;
+}
+.all-logos img{
+    height: auto;
+    max-width: 90%;
+}
+.gsweb-jslide{
+    height: 150px!important;
+}
+.gsweb-contributors{
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+    & .gsweb-item{
+        position: relative;
+        & p{
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
 }
