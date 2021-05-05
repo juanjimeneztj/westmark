@@ -181,3 +181,29 @@ header{
         font-family: var(--bs-font-sans-serif)!important;
     }
 }
+
+// Events
+.gsweb-bg-event{
+    background: {
+        color: var(--primary);
+        image: url(../assets/images/header_events.png);
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    position: relative;
+    &::before{
+        background: linear-gradient(to left,var(--secondary) 0%, var(--primary) 50%);
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+}
+article{
+    cursor: pointer;
+}
