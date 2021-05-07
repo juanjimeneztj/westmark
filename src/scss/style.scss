@@ -5,6 +5,7 @@ header{
     & .logo,& .logo-mobile{
         height: auto;
         max-width: 280px;
+        margin-top: -7px;
         width: 100%;
     }
     & .logo-mobile{
@@ -60,6 +61,7 @@ header{
             list-style: none!important;
             margin: 0!important;
             padding: 0!important;
+            margin-bottom: -5px!important;
             & > li{
                 &:first-of-type{
                     margin-left: auto;
@@ -204,6 +206,30 @@ header{
         z-index: 0;
     }
 }
+
 article{
     cursor: pointer;
+}
+
+// News
+.gsweb-bg-news{
+    background: {
+        color: var(--primary);
+        image: url(../assets/images/header_news.png);
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    position: relative;
+    &::before{
+        background: linear-gradient(to left,var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
 }
