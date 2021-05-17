@@ -209,6 +209,9 @@ header{
 
 article{
     cursor: pointer;
+    & .wm-image-75{
+        height: 100px!important;
+    }
 }
 
 // News
