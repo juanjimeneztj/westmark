@@ -2,6 +2,8 @@ div, div *{
     overflow: hidden;
 }
 header{
+    position: relative;
+    z-index: 2;
     & .logo,& .logo-mobile{
         height: auto;
         max-width: 280px;
@@ -238,5 +240,5 @@ article{
 }
 section{
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
