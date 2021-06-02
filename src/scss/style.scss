@@ -1,6 +1,9 @@
 div, div *{
     overflow: hidden;
 }
+#wpadminbar,#wpadminbar *{
+    overflow: auto!important;
+}
 header{
     position: relative;
     z-index: 2;
